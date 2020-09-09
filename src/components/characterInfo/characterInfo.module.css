@@ -1,0 +1,7 @@
+.character{
+    display: flex;
+    justify-content: center;
+}
+.character img{
+    margin-right: 40px;
+}
