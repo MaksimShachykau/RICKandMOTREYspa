@@ -1,16 +1,19 @@
 .serie{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     margin-bottom: 20px;
     color: white;
-}
-p{  
-
+    margin-left: 10px;
+} 
+p{ 
     margin-top: 0;
 }
 .seriesBlock{
-    padding: 20px 10%;
+    padding: 20px;
     text-align: center;
     color: white;
+}
+.series{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
 }

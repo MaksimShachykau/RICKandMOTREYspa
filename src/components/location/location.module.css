@@ -1,0 +1,80 @@
+.location{
+    width: 25%;
+    border: 3px solid rgb(3, 167, 11);
+    background-color: rgba(0, 0, 0, 0.384);
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: -0px 0px 10px rgb(0, 248, 13);
+    
+}
+.locationsBlock{
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.navLocatinsBlock{
+    text-align: center;
+    transform: translateX(-20px);
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    -o-transform: translateX(-20px);
+}
+.point{
+    
+    color: rgb(255, 255, 255);
+    margin-left: 20px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    transition: all 1.3s;
+    -webkit-transition: all 1.3s;
+    -moz-transition: all 1.3s;
+    -ms-transition: all 1.3s;
+    -o-transition: all 1.3s;
+    cursor: pointer;
+}
+
+.active{
+    margin-left: 20px;
+    width: 25px;
+    height: 25px;
+    color:rgb(0, 180, 60);
+    text-align: center;
+    transition: all 1.3s;
+    -webkit-transition: all 1.3s;
+    -moz-transition: all 1.3s;
+    -ms-transition: all 1.3s;
+    -o-transition: all 1.3s;
+    cursor: pointer;
+}
+@media screen and (max-width:1000px) { 
+    .location{
+        font-size: 0.9em;
+    }
+}
+@media screen and (max-width:750px) { 
+    .location{
+        font-size: 0.8em;
+    }
+}
+@media screen and (max-width:650px) { 
+    .location{
+        width: 40%;
+    }
+}
+@media screen and (max-width:380px) { 
+    .location{
+        width: 90%;
+        font-size: 1em;
+
+    }
+}

@@ -9,9 +9,11 @@ const Home = () => {
             <div className={style.content}>
                 <img src = {RiM}/>
             </div>
-            <video className = {style.bgVideo} autoPlay muted loop>
-                <source src={bgVideo} type='video/mp4'></source>
-            </video>
+            <div className = {style.videoBlock}>
+                <video className = {style.bgVideo} autoPlay muted loop>
+                    <source src={bgVideo} type='video/mp4'></source>
+                </video>
+            </div>
         </div>
     )
 }

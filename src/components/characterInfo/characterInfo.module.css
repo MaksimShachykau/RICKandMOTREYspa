@@ -1,7 +1,89 @@
+.characterInfoBlock{
+    position: relative;
+    width: 100%;
+}
 .character{
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    border: 1px solid #000000;
+    position: relative;
 }
-.character img{
-    margin-right: 40px;
+.characterImage{
+    position: absolute;
+   left: 40%;
+   z-index: 1;
+    
+}
+.characterInfo{
+    z-index: 2;
+    position: absolute;
+    top: 14%;
+    left: 55%;
+    color: rgb(182, 172, 172);
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    background-color:#000000be;
+    font-size:12px;
+    border: 3px solid black;
+    box-shadow: -12px 13px 9px -5px rgba(0, 0, 0, 0.6);
+    width: 35%;
+}
+.bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+video {
+    object-fit: contain;
+}
+
+.bgVideo{
+    position: fixed;
+    min-width: 110%;
+    min-height: 110%;
+    width: auto;
+    height: auto;
+    top: -50px;
+    z-index: 0;
+    display: block;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+@media screen and (max-width:1050px) { 
+    .characterInfo{
+        z-index: 5;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        background-color: #00000062;
+        color:rgb(92, 255, 92);
+    }
+}
+@media screen and (max-width:650px) { 
+
+    .character{
+        margin-top: 6vh;
+        height: 60vh;
+    }
+    
+    
+}
+@media screen and (max-width:520px) { 
+    .characterImage{
+        width: 200px;
+    }
+}
+@media screen and (max-width:350px) { 
+    .characterImage{
+        width: 150px;
+    }
 }

@@ -1,10 +1,15 @@
 .app-wrapper-content{
   height: fit-content;
-  min-height: 80vh;
+  min-height: 60vh;
   background-color:#0c1908;
   color: white;
   width: 100%;
   max-width: 2000px;
+  box-sizing: border-box;
+}
+body{
+  background-color:#0c1908;
+
 }
 .container{
   width: 80%;

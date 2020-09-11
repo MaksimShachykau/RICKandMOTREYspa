@@ -6,10 +6,11 @@ import {getCharacterInfoThCr} from '../../redux/characterInfoReducer'
 
 class CharacterInfoContainer extends React.Component {
     componentDidMount = () => {
-        this.props.getCharacterInfoThCr(this.props.match.params.UserId);        
+        this.props.getCharacterInfoThCr(this.props.match.params.UserId); 
+        this.forceUpdate()       
     }
     render(){
-        return(
+        return( 
             <div>
                 <CharacterInfo characterData = {this.props.characterData}/>
             </div>

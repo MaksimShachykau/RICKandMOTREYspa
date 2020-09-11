@@ -6,7 +6,7 @@ import NavBar from './components/navbar/nav';
 import Home from './components/home/home';
 import CharactersContainer from './components/characters/charactersContainer'
 import SeriesContain from './components/series/seriesContain';
-import Location from './components/location/location';
+import LocationContainer from './components/location/locationContainer';
 import CharacterInfoContainer from './components/characterInfo/characterInfoContainer';
 import Footer from './components/footer/footer';
 function App() {
@@ -16,14 +16,11 @@ function App() {
         <Header/>
         <NavBar/>
         <main className = 'app-wrapper-content'>
-          
             <Route path ='/home' render = { () => <Home/>}/>
-          <div className = 'container'>
             <Route path ='/characters/:filter?' render = { () => <CharactersContainer/>}/>
             <Route path ='/series' render = { () => <SeriesContain/>}/>
-            <Route path ='/location' render = { () => <Location/>}/>
+            <Route path ='/location' render = { () => <LocationContainer/>}/>
             <Route path ='/character/:UserId?' render = { () => <CharacterInfoContainer/>}/>
-          </div>
         </main>
         <Footer/>
       </>
