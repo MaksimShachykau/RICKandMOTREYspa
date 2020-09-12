@@ -10,13 +10,14 @@ import LocationContainer from './components/location/locationContainer';
 import CharacterInfoContainer from './components/characterInfo/characterInfoContainer';
 import Footer from './components/footer/footer';
 function App() {
+  
   return (
     <BrowserRouter>
       <>
         <Header/>
         <NavBar/>
         <main className = 'app-wrapper-content'>
-            <Route path ='/home' render = { () => <Home/>}/>
+            <Route exact path='/' render = { () => <Home/>}/>
             <Route path ='/characters/:filter?' render = { () => <CharactersContainer/>}/>
             <Route path ='/series' render = { () => <SeriesContain/>}/>
             <Route path ='/location' render = { () => <LocationContainer/>}/>

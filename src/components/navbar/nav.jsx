@@ -4,7 +4,7 @@ import style from './nav.module.css';
 const NavBar = () => {
 	return (
 		<nav className={style.navBlock}>
-			<NavLink className={style.item} to="/home" activeClassName={style.active}>
+			<NavLink className={style.item} to="/" >
 				HOME
 			</NavLink>
 			<NavLink className={style.item} to="/characters" activeClassName={style.active}>
