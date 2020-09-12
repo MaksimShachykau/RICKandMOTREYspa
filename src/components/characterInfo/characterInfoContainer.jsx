@@ -1,30 +1,29 @@
-import React from 'react'
-import CharacterInfo from './characterInfo'
+import React from 'react';
+import CharacterInfo from './characterInfo';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import {getCharacterInfoThCr} from '../../redux/characterInfoReducer'
+import { getCharacterInfoThCr } from '../../redux/characterInfoReducer';
 
 class CharacterInfoContainer extends React.Component {
-    componentDidMount = () => {
-        this.props.getCharacterInfoThCr(this.props.match.params.UserId); 
-        this.forceUpdate()       
-    }
-    render(){
-        return( 
-            <div>
-                <CharacterInfo characterData = {this.props.characterData}/>
-            </div>
-        )
-    }
+	componentDidMount = () => {
+		this.props.getCharacterInfoThCr(this.props.match.params.UserId);
+		this.forceUpdate();
+	};
+	render() {
+		return (
+			<div>
+				<CharacterInfo characterData={this.props.characterData} />
+			</div>
+		);
+	}
 }
 let mapStateToProps = (state) => {
-    return{
-        characterData: state.charactersInfo.characterData
-    }
-}
+	return {
+		characterData: state.charactersInfo.characterData
+	};
+};
 let mapDispatchToProps = {
-
-    getCharacterInfoThCr
-}
-let WithUrlCharInfo = withRouter(CharacterInfoContainer)
-export default connect(mapStateToProps, mapDispatchToProps)(WithUrlCharInfo)
+	getCharacterInfoThCr
+};
+let WithUrlCharInfo = withRouter(CharacterInfoContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(WithUrlCharInfo);
