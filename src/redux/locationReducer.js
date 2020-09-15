@@ -2,8 +2,8 @@ import {
     locationAPI
 } from '../API/API'
 const SET_LOCATIONS = 'SET-LOCATIONS',
-    SET_ALL_PAGES = 'SET-ALL-PAGES',
-    SET_NEXT_PAGE = 'SET_NEXT_PAGE',
+    SET_ALL_PAGES_LOC = 'SET-ALL-PAGES-LOC',
+    SET_NEXT_PAGE_LOC = 'SET_NEXT_PAGE_LOC',
     SET_IMAGE_RESIDENT = 'SET_IMAGE_RESIDENT'
 
 const initialState = {
@@ -23,13 +23,13 @@ export const locationsReducer = (state = initialState, action) => {
                 locations: action.locations
             }
         }
-        case SET_ALL_PAGES: {
+        case SET_ALL_PAGES_LOC: {
             return {
                 ...state,
                 allPages: action.allPages
             }
         }
-        case SET_NEXT_PAGE: {
+        case SET_NEXT_PAGE_LOC: {
             return {
                 ...state,
                 currentPage: action.nextPage
@@ -58,20 +58,19 @@ export const setImageResident = (images, id) => ({
     id
 })
 export const setAllPages = (allPages) => ({
-    type: SET_ALL_PAGES,
+    type: SET_ALL_PAGES_LOC,
     allPages
 })
 export const setNexPage = (nextPage) => ({
-    type: SET_NEXT_PAGE,
+    type: SET_NEXT_PAGE_LOC,
     nextPage
 })
 
 export const getLocationsThCr = (currentPage) => (dispatch) => {
+    dispatch(setNexPage(currentPage));
     locationAPI.getLocations(currentPage)
         .then(data => {
             dispatch(setLocation(data.results));
             dispatch(setAllPages(data.info.pages));
-            dispatch(setNexPage(currentPage));
-
         })
 }

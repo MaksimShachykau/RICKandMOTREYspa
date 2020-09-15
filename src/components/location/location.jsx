@@ -4,11 +4,6 @@ import { WithPagesContainer} from '../../HOC/withPagesContainer'
 
 
 const Location = (props) => {
-	/*let allPages = [];
-	for (let i = 1; i <= props.allPages; i++) {
-		allPages.push(i);
-	}*/
- 
 	return (
 		<div>
 			<div className={style.navLocatinsBlock}>

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { setLocation, setAllPages, setNexPage, setImageResident, getLocationsThCr } from '../../redux/locationReducer';
 class LocationContainer extends React.Component {
 	componentDidMount = () => {
+
 		this.props.getLocationsThCr(this.props.currentPage);
 	};
 	setCurrentPage = (page) => {
