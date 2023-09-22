@@ -1,6 +1,6 @@
 @font-face {
     font-family: "RickandMortyFonts";
-    src: url("/my-app/src/assets/fonts/get-schwifty.ttf");
+    src: url("../../../src/assets/fonts/get-schwifty.ttf");
     font-style: Regular;
     font-weight: 400;
 }

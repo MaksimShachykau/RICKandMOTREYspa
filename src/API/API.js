@@ -1,13 +1,13 @@
-import *as axios from 'axios';
+import axios from 'axios';
 
 const instanceAxios = axios.create({
     baseURL: 'https://rickandmortyapi.com/api/'
 })
 
-   
-export const charactersAPI =  {
+
+export const charactersAPI = {
     getCharacters: (currentPage) => {
-        return( 
+        return(
             instanceAxios.get(`character/?page=${currentPage}`)
         ).then(responce => responce.data)
     },
@@ -29,6 +29,6 @@ export const locationAPI = {
         ).then(responce => responce.data)
     },
     getNexPageLocations: () => {
-        
+
     }
 }

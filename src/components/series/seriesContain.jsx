@@ -1,7 +1,7 @@
 import React from "react";
 import Series from "./series";
 import { connect } from "react-redux";
-import * as axios from "axios";
+import axios from "axios";
 import { setDataInSeries } from "../../redux/seriesReducer";
 
 class SeriesContain extends React.Component {
